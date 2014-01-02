@@ -12,10 +12,6 @@ simple as:
 ```bash
 year "today I've done amazing things"
 
-#you can also specify a date
-##the accepted time format is %m-%d-%Y
-year "today I've done amazing things" --date 01-03-2014
-
 #list things you have done this year
 year list
 

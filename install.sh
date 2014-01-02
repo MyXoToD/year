@@ -6,5 +6,5 @@ echo "created executable in /usr/local/bin/year"
 rm ~/year.txt
 touch ~/year.txt
 rm "$PWD/year.txt"
-ln -s ~/year.txt "$PWD/year.txt"
+ln ~/year.txt "$PWD/year.txt"
 echo "created ~/year.txt and link to git directory"

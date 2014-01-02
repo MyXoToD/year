@@ -4,7 +4,7 @@ if [ -z "$1" ]; then
     USAGE\
 \n
     example:
-        year "managed to get a girls phone number, things are going great"
+        year \"managed to get a girls phone number, things are going great\"
 
         year list
 

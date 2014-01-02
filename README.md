@@ -1,11 +1,11 @@
 year
 ====
 
-keep track what shit you've done in 2014, without ever leaving your terminal.
+keep track what you've done in 2014, without ever leaving your terminal.
 
 git backup, purely file based.
 
-##USAGE
+##[sa]usage
 
 simple as:
 

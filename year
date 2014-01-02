@@ -1,0 +1,13 @@
+_year() 
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="--date list trim delete purge fuckthepolice reset"
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+    #if [[ ${cur} == -* ]] ; then
+    #fi
+}
+complete -F _year year

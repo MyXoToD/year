@@ -10,6 +10,20 @@ if [ -z "$1" ]; then
     
     Valid dates are in the following format: %d-%m-%Y
     "
+    echo "Would you like to see what you did this year? [y/N]"
+    read ANSWER
+    if [ "$ANSWER" = "y" ];then
+        less ~/year.txt
+    fi
+    exit
+fi
+
+if [ "$1" = "list" ];then
+    less ~/year.txt
+    exit
+fi
+if [ "$1" = "trim" ] || [ "$1" = "delete" ] || [ "$1" = "purge" ] || [ "$1" = "fuckthepolice" ] || [ "$1" = "reset" ];then
+    cat /dev/null > ~/year.txt
     exit
 fi
 
@@ -20,7 +34,6 @@ while [ "$1" != "" ]; do
     case $1 in
         -d | --date)
             shift
-            echo "found date"
             TODAY="$1"
             ;;
     esac
@@ -28,7 +41,6 @@ while [ "$1" != "" ]; do
 done
 
 EXISTS=$(egrep -e "$TODAY" ~/year.txt | wc -l)
-echo $TODAY
 
 if [ "$EXISTS" -eq "1" ];then
     echo "\t\t$MSG" >> ~/year.txt
